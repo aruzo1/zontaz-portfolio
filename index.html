@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Kalam&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles/swiper.css" />
     <link rel="stylesheet" href="dist/globals.css" />
+
     <title>Home - Zontaz</title>
   </head>
   <body>
@@ -35,7 +38,7 @@
       </nav>
 
       <main
-        class="container flex flex-col gap-y-8 mt-24 text-center items-center"
+        class="container flex flex-col items-center gap-8 mt-24 text-center"
       >
         <h1 class="text-8xl text-white font-bold">
           Creating
@@ -52,73 +55,89 @@
         <a href="/projects" class="btn btn--lg">Explore Projects</a>
       </main>
 
-      <div class="swiper cursor-pointer mt-24 px-8">
-        <div class="swiper-wrapper">
-          <img
-            width="533"
-            height="300"
-            src="images/project-1.png"
-            class="swiper-slide object-cover rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-2.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-3.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-4.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-1.png"
-            class="swiper-slide object-cover rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-2.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-3.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-4.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-1.png"
-            class="swiper-slide rounded"
-          />
-          <img
-            width="533"
-            height="300"
-            src="images/project-2.png"
-            class="swiper-slide rounded"
-          />
+      <div class="relative">
+        <div
+          class="absolute w-full h-[300px] top-1/2 left-0 -translate-y-1/2 blur-[200px] opacity-30 bg-primary-600"
+        ></div>
+
+        <div class="swiper cursor-pointer relative mt-24 px-8">
+          <div class="swiper-wrapper">
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-1.png"
+              class="swiper-slide object-cover rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-2.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-3.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-4.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-1.png"
+              class="swiper-slide object-cover rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-2.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-3.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-4.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-1.png"
+              class="swiper-slide rounded"
+            />
+            <img
+              alt="Zontaz's project"
+              width="533"
+              height="300"
+              src="images/project-2.png"
+              class="swiper-slide rounded"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="h-[600px] -mt-6 rounded-t bg-neutral-300"></section>
+    <section class="h-[600px] -mt-6 rounded-t bg-white"></section>
 
     <script src="scripts/swiper.js"></script>
     <script src="scripts/index.js"></script>
