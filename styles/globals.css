@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-family: "DM Sans", sans-serif;
+  html {
+    @apply bg-black text-white font-sans;
   }
 }
 
 @layer components {
   .link {
-    @apply font-bold text-white transition-colors hover:text-neutral-300;
+    @apply font-bold cursor-pointer hover:text-neutral-200 transition-colors;
   }
 
   .btn {
-    @apply cursor-pointer block w-fit px-6 py-3 rounded-full font-bold text-white bg-primary-600 transition-colors hover:bg-primary-700;
+    @apply px-6 py-3 rounded-full font-bold text-white bg-primary-600 hover:bg-primary-700 transition-colors;
   }
-  .btn--lg {
+
+  .btn-lg {
     @apply px-8 py-4 text-xl;
   }
 }
