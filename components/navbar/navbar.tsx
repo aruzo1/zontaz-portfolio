@@ -7,10 +7,16 @@ export const Navbar = () => {
     <div className="bg-neutral-950 pt-8">
       <nav className="container flex items-center justify-between">
         <Link href="/">
-          <Image alt="logo" src="/logo.png" height="25" width="100" />
+          <Image
+            alt="logo"
+            src="/logo.png"
+            height={25}
+            width={100}
+            quality={100}
+          />
         </Link>
 
-        <ul className="hidden md:flex gap-16 font-bold">
+        <ul className="hidden md:flex gap-16 font-bold text-white">
           <li>
             <Link href="/" className="link">
               Home

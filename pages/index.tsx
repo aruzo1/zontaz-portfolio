@@ -1,13 +1,17 @@
-import { HeroSection, Navbar } from "@/components";
+import { HeroSection, Navbar, ProcessSection } from "@/components";
+import Head from "next/head";
 
 const HomePage = () => {
   return (
     <>
+      <Head>
+        <title>Home - Zontaz</title>
+      </Head>
+
       <Navbar />
       <HeroSection />
-      <section className="w-full h-[500px] mt-16 md:mt-24 pt-16 md:pt-24 rounded-t bg-neutral-100">
-        <h2 className="container text-6xl text-black font-bold">About Us</h2>
-      </section>
+      <ProcessSection />
+      <section className="h-[500px] -mt-6 pt-16 md:pt-24 rounded-t bg-neutral-100" />
     </>
   );
 };
