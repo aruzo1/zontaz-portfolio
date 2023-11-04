@@ -15,7 +15,7 @@ export const HeroText = () => {
         technical knowledge to bring your vision to life online.
       </p>
 
-      <Link href="/work" className="btn btn-lg">
+      <Link href="/work" className="btn btn-lg w-full md:w-fit">
         Explore Work <ArrowRightIcon className="w-6 h-6" />
       </Link>
     </div>
