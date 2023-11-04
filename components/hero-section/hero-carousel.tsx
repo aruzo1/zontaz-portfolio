@@ -15,11 +15,6 @@ const slides = [
 export const HeroCarousel = () => {
   return (
     <nav className="container relative max-w-[1920px] md:px-8 mt-16 md:mt-24">
-      <div
-        className={`absolute top-0 left-0 w-full h-full blur-[100px] 
-                    md:blur-[200px] opacity-40 bg-primary-600`}
-      />
-
       <Swiper
         loop
         autoplay={{

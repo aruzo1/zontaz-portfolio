@@ -3,7 +3,7 @@ import { HeroText } from "./hero-text";
 
 export const HeroSection = () => {
   return (
-    <main>
+    <main className="pt-16 md:pt-24 bg-neutral-950">
       <HeroText />
       <HeroCarousel />
     </main>

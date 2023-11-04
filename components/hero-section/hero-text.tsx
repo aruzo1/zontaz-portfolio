@@ -1,12 +1,12 @@
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export const HeroText = () => {
   return (
-    <div className="container flex flex-col items-center mt-16 md:mt-24 gap-8 text-center">
+    <div className="container flex flex-col items-center gap-8 text-center">
       <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold">
-        Creating{" "}
-        <span className="text-primary-600">amazing</span>{" "}
-        websites for your business
+        Creating <span className="text-primary-600">amazing</span> websites for
+        your business
       </h1>
 
       <p className="max-w-5xl text-lg md:text-xl text-neutral-300">
@@ -16,7 +16,7 @@ export const HeroText = () => {
       </p>
 
       <Link href="/work" className="btn btn-lg">
-        Explore Work
+        Explore Work <ArrowRightIcon className="w-6 h-6" />
       </Link>
     </div>
   );
