@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 export const HeroText = () => {
   return (
     <div className="container flex flex-col items-center gap-8 text-center">
-      <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold">
+      <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
         Creating <span className="text-primary-600">amazing</span> websites for
         your business
       </h1>
