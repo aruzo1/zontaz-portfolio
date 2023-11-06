@@ -3,7 +3,7 @@ import { ShowcaseProject } from "./showcase-project";
 
 export const Showcase = () => {
   return (
-    <section className="container py-16 md:py-24">
+    <section className="container py-16 md:py-24 pb-24 md:pb-[7.5rem]">
       <div className="text-center">
         <div>
           <span className="text-lg sm:text-xl font-bold text-primary-600">
