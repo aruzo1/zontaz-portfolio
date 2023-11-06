@@ -1,4 +1,4 @@
-import { Footer, HeroSection, Navbar, ProcessSection } from "@/components";
+import { HeroSection, ProcessSection } from "@/components";
 import Head from "next/head";
 
 const HomePage = () => {
@@ -8,10 +8,8 @@ const HomePage = () => {
         <title>Home - Zontaz</title>
       </Head>
 
-      <Navbar />
       <HeroSection />
       <ProcessSection />
-      <Footer />
     </>
   );
 };

@@ -24,7 +24,7 @@ const SocialIcon = ({ href, icon }: SocialIconProps) => {
 
 export const Footer = () => {
   return (
-    <footer className="-mt-6 py-9 rounded-t bg-primary-600">
+    <footer className="-mt-6 py-8 rounded-t bg-primary-600">
       <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
         <Image src="/logo.png" alt="zontaz's logo" width={100} height={25} />
 
@@ -34,7 +34,7 @@ export const Footer = () => {
           ))}
         </ul>
 
-        <span className="text-white">All rights reservered to Zontaz 2023</span>
+        <span className="text-white text-center">All rights reservered to Zontaz 2023</span>
       </div>
     </footer>
   );

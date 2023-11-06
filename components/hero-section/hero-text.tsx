@@ -9,14 +9,14 @@ export const HeroText = () => {
         your business
       </h1>
 
-      <p className="max-w-5xl sm:text-xl text-neutral-300">
+      <p className="max-w-5xl sm:text-lg text-neutral-300">
         We&apos;re the go-to for crafting stunning websites that boost your
         online presence and business success. Our team combines creativity and
         technical knowledge to bring your vision to life online.
       </p>
 
-      <Link href="/work" className="btn btn-lg w-full sm:w-fit">
-        Explore Work <ArrowRightIcon className="w-6 h-6" />
+      <Link href="/showcase" className="btn btn-lg w-full sm:w-fit">
+        Explore Showcase <ArrowRightIcon className="w-6 h-6" />
       </Link>
     </div>
   );

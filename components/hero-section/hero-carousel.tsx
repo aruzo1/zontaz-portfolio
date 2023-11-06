@@ -24,7 +24,7 @@ export const HeroCarousel = () => {
       >
         {SLIDES.map(({ src, alt, slug }, i) => (
           <SwiperSlide key={i}>
-            <Link href={`/work/${slug}`}>
+            <Link href={`/showcase/${slug}`}>
               <Image
                 src={src}
                 alt={alt}
