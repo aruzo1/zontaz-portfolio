@@ -7,7 +7,7 @@ import { SLIDES } from "./constants";
 
 export const HeroCarousel = () => {
   return (
-    <nav className="container relative max-w-[1920px] md:px-8 mt-16 md:mt-24">
+    <nav className="container max-w-[1920px] md:px-8 mt-16 md:mt-24">
       <Swiper
         loop
         autoplay={{

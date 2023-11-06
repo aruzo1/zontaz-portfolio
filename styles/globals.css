@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply font-sans bg-neutral-950;
-  }
-}
-
 @layer components {
   .link {
     @apply font-bold cursor-pointer hover:text-neutral-200 transition-colors;
