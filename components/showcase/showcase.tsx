@@ -1,4 +1,4 @@
-import { PROJECTS } from "./constants";
+import { PROJECTS } from "@/lib/constants";
 import { ShowcaseProject } from "./showcase-project";
 
 export const Showcase = () => {
@@ -23,8 +23,8 @@ export const Showcase = () => {
 
       <main>
         <ul className="grid md:grid-cols-2  lg:grid-cols-3 gap-8 mt-16">
-          {PROJECTS.map((props) => (
-            <ShowcaseProject key={props.title} {...props} />
+          {PROJECTS.map((project) => (
+            <ShowcaseProject key={project.id} {...project} />
           ))}
         </ul>
       </main>

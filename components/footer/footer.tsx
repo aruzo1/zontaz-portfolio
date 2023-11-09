@@ -1,14 +1,9 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { SOCIALS } from "./constants";
+import { SOCIALS } from "@/lib/constants";
 
-type SocialIconProps = {
-  href: string;
-  icon: ReactNode;
-};
-
-const SocialIcon = ({ href, icon }: SocialIconProps) => {
+const SocialIcon = ({ href, icon }: { href: string; icon: ReactNode }) => {
   return (
     <li>
       <Link
@@ -34,7 +29,9 @@ export const Footer = () => {
           ))}
         </ul>
 
-        <span className="text-white text-center">All rights reservered to Zontaz 2023</span>
+        <span className="text-white text-center">
+          All rights reservered to Zontaz 2023
+        </span>
       </div>
     </footer>
   );

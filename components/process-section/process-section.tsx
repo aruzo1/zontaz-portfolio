@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ProcessStep } from "./process-step";
-import { PROCESS_STEPS } from "./constants";
+import { PROCESS_STEPS } from "@/lib/constants";
 
 export const ProcessSection = () => {
   return (
