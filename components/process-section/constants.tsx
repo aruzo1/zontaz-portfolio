@@ -1,33 +1,33 @@
 import {
-  BanknotesIcon,
   PaintBrushIcon,
+  PencilSquareIcon,
   RocketLaunchIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/20/solid";
 
 export const PROCESS_STEPS = [
   {
-    icon: <BanknotesIcon className="w-6 h-6" />,
-    title: "Estimation",
+    icon: <PencilSquareIcon className="w-6 h-6" />,
+    title: "Your ideas matter",
     description:
-      "You'll receive a detailed preliminary estimate within the next 30 minutes, so you can plan with confidence.",
+      "We want to hear all about your ideas for the website. It's your space, and we want to make sure it's just the way you picture it in your mind.",
   },
   {
     icon: <PaintBrushIcon className="w-6 h-6" />,
-    title: "Graphic design",
+    title: "Creating cool looks",
     description:
-      "We start from a blank page. We familiarize ourselves with your offer and then enhance it with great graphics and texts.",
+      "Our team of graphic designers makes your website look super cool. They choose colors, pictures, and layouts to make it visually stunning.",
   },
   {
     icon: <WrenchScrewdriverIcon className="w-6 h-6" />,
-    title: "Programming",
+    title: "Cracking the code",
     description:
-      "We focus on loading speed. Drawing from our experience, we propose simple solutions. We simplify, not complicate.",
+      "Our tech wizards use special code to make your website work. They bring your design to life by making it interactive and functional.",
   },
   {
     icon: <RocketLaunchIcon className="w-6 h-6" />,
     title: "Testing and launch",
     description:
-      "Before publishing the website, we check it on various devices and browsers. You will receive a test link from us for verification.",
+      "Before your website goes live, we test everything to make sure it's perfect. Then, we launch it for the world to see and enjoy.",
   },
 ];

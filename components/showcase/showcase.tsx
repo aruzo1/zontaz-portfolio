@@ -7,7 +7,7 @@ export const Showcase = () => {
       <div className="text-center">
         <div>
           <span className="text-lg sm:text-xl font-bold text-primary-600">
-            Showcase
+            OUR SHOWCASE
           </span>
 
           <h1 className="mt-4 text-4xl sm:text-5xl lg:text-7xl font-bold text-white">

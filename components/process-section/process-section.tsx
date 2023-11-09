@@ -9,7 +9,7 @@ export const ProcessSection = () => {
         <div className="lg:w-2/5 flex flex-col gap-4 md:gap-6">
           <div>
             <span className="text-lg sm:text-xl font-bold text-primary-600">
-              OUR PROCESS
+              THE PROCESS
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-3 md:mt-4">
               Bringing your vision to life
@@ -17,12 +17,11 @@ export const ProcessSection = () => {
           </div>
 
           <p className="sm:text-lg text-neutral-600">
-            At Zontaz, we follow a structured approach to ensure that every
-            project is executed seamlessly and efficiently. Here&apos;s how we
-            bring your vision to life.
+            At Zontaz, we&apos;re here to build the website of your dreams. We
+            follow these steps to make sure your website is more than great!
           </p>
           <Link href="/quotation" className="btn self-start">
-            Get Quotation
+            Get a quote
           </Link>
         </div>
 

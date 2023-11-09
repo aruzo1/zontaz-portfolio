@@ -17,6 +17,9 @@ const config: Config = {
         DEFAULT: "1280px",
       },
     },
+    fontFamily: {
+      sans: ["DM Sans", "sans-serif"],
+    },
     extend: {
       colors: {
         white: "#ffffff",
