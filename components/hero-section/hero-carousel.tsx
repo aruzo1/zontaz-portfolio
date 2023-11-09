@@ -25,7 +25,10 @@ export const HeroCarousel = () => {
       >
         {PROJECTS.map(({ id, title, src, alt, slug }) => (
           <SwiperSlide key={id}>
-            <Link className="group relative" href={`/showcase/${slug}`}>
+            <Link
+              href={`/showcase/${slug}`}
+              className="group relative block aspect-video"
+            >
               <div
                 className={`absolute inset-0 opacity-0 group-hover:opacity-100 
                             rounded bg-primary-600/60 text-white 
@@ -44,10 +47,9 @@ export const HeroCarousel = () => {
               <Image
                 src={src}
                 alt={alt}
-                className="rounded object-contain"
-                height={360}
-                width={640}
-                quality={100}
+                className="rounded"
+                width={598}
+                height={336}
               />
             </Link>
           </SwiperSlide>
