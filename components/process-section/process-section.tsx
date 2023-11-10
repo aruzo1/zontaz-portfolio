@@ -6,7 +6,7 @@ export const ProcessSection = () => {
   return (
     <section
       id="process-steps"
-      className="-mt-6 pt-16 md:pt-24 pb-24 md:pb-[7.5rem] rounded-t bg-white"
+      className="-mt-6 pt-16 md:pt-24 pb-24 md:pb-[7.5rem] rounded-t bg-neutral-100"
     >
       <div className="container flex flex-col lg:flex-row gap-12 md:gap-16">
         <div className="lg:w-2/5 flex flex-col gap-4 md:gap-6">
@@ -14,12 +14,12 @@ export const ProcessSection = () => {
             <span className="text-lg sm:text-xl font-bold text-primary-600">
               THE PROCESS
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-3 md:mt-4">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-4">
               Bringing your vision to life
             </h2>
           </div>
 
-          <p className="sm:text-lg text-neutral-600">
+          <p className="sm:text-lg text-neutral-700">
             At Zontaz, we&apos;re here to build the website of your dreams. We
             follow these steps to make sure your website is more than great!
           </p>

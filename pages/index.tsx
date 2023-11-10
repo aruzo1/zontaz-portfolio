@@ -1,4 +1,4 @@
-import { HeroSection, ProcessSection } from "@/components";
+import { FaqSection, HeroSection, ProcessSection } from "@/components";
 import Head from "next/head";
 
 const HomePage = () => {
@@ -10,6 +10,7 @@ const HomePage = () => {
 
       <HeroSection />
       <ProcessSection />
+      <FaqSection />
     </>
   );
 };
