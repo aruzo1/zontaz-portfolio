@@ -9,8 +9,6 @@ const HomePage = () => {
       </Head>
 
       <HeroSection />
-      <ProcessSection />
-      <FaqSection />
     </>
   );
 };

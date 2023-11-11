@@ -1,13 +1,12 @@
 import type { AppProps } from "next/app";
-import { Footer, Navbar } from "@/components";
 import "@/styles/globals.css";
+import { Navbar } from "@/components";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="pt-20 font-sans bg-neutral-950">
+    <div className="font-sans">
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
     </div>
   );
 }

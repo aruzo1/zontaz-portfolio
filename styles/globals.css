@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  ::selection {
+    @apply bg-primary-600 text-white;
+  }
+
+  body {
+    @apply bg-gray-950;
+  }
+}
+
+@layer utilities {
+  .text-shine {
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.65);
+  }
+
+  .shine-md {
+    box-shadow: 0 4px 4px rgba(8, 8, 8, 0.08), 0 1px 2px rgba(8, 8, 8, 0.2),
+      inset 0 6px 12px rgba(255, 255, 255, 0.12),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .shine-sm {
+    box-shadow: 0 4px 4px rgba(8, 8, 8, 0.08), 0 1px 2px rgba(8, 8, 8, 0.2),
+      inset 0 6px 6px rgba(255, 255, 255, 0.03),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  }
+}
+
 @layer components {
   .link {
-    @apply font-bold cursor-pointer hover:text-neutral-200 transition-colors;
+    @apply cursor-pointer font-bold text-white hover:text-neutral-200 transition-colors;
   }
 
   .btn {
-    @apply cursor-pointer flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-white bg-primary-600 hover:bg-primary-700 transition-colors;
+    @apply shine-md cursor-pointer flex justify-center items-center px-6 py-3 rounded font-bold text-white bg-primary-600 hover:bg-primary-700 transition-colors;
   }
 
-  .btn-lg {
-    @apply px-8 py-4 text-xl;
-  }
-
-  .btn-white {
-    @apply bg-white text-black hover:bg-neutral-200;
+  .btn-gray {
+    @apply btn shine-sm bg-gray-800 hover:bg-gray-900;
   }
 }

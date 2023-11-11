@@ -1,30 +1,30 @@
-import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NavbarDialog } from "./navbar-dialog";
-import { NAVIGATION } from "./constants";
+import { Socials } from "@/components";
+import { Bars3Icon } from "@heroicons/react/20/solid";
+
+const NAVIGATION = [
+  { href: "/", label: "Home" },
+  { href: "/showcase", label: "Showcase" },
+  { href: "/contact", label: "Contact" },
+];
 
 export const Navbar = () => {
-  const lastNavigationItem = useMemo(
-    () => NAVIGATION[NAVIGATION.length - 1],
-    []
-  );
-
   return (
-    <div className="absolute z-30 top-8 left-0 right-0 pointer-events-auto">
-      <nav className="container flex items-center justify-between">
+    <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 bg-gray-950 border-b border-b-gray-800">
+      <nav className="container flex items-center justify-between lg:justify-start h-full">
         <Link href="/">
           <Image
             alt="logo"
             src="/logo.png"
-            height={25}
-            width={100}
+            height={22.5}
+            width={90}
             quality={100}
           />
         </Link>
 
-        <ul className="hidden md:flex gap-16 font-bold text-white">
-          {NAVIGATION.slice(0, -1).map(({ href, label }) => (
+        <ul className="hidden lg:flex gap-12 ml-16">
+          {NAVIGATION.map(({ href, label }) => (
             <li key={label}>
               <Link href={href} className="link">
                 {label}
@@ -33,11 +33,18 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <Link href={lastNavigationItem.href} className="hidden md:block btn">
-          {lastNavigationItem.label}
-        </Link>
+        <div className="hidden lg:flex gap-4 ml-auto">
+          <Socials />
 
-        <NavbarDialog />
+          <Link href="/quote" className="btn">
+            Get a quote
+            <span className="font-normal ml-1">- it&apos;s free</span>
+          </Link>
+        </div>
+
+        <button className="lg:hidden">
+          <Bars3Icon className="w-8 h-8 text-white" />
+        </button>
       </nav>
     </div>
   );
