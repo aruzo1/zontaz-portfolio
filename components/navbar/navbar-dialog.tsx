@@ -22,7 +22,7 @@ export const NavbarDialog = () => {
         <Transition show={isOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
+            enter="ease-out duration-200"
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="ease-in duration-300"
@@ -34,7 +34,7 @@ export const NavbarDialog = () => {
 
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
+            enter="ease-out duration-200"
             enterFrom="-top-full"
             enterTo="top-0"
             leave="ease-in duration-300"
