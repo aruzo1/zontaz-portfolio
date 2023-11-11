@@ -11,7 +11,7 @@ const NAVIGATION = [
 
 export const Navbar = () => {
   return (
-    <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 bg-gray-950 border-b border-b-gray-800">
+    <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 bg-gray-950/90 border-b border-b-gray-800 backdrop-blur-lg">
       <nav className="container flex items-center justify-between lg:justify-start h-full">
         <Link href="/">
           <Image

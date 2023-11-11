@@ -3,7 +3,7 @@ import { HeroProjects } from "./hero-projects";
 
 export const HeroSection = () => {
   return (
-    <main className="relative py-28 xl:py-24">
+    <main className="relative pt-32 py-16 xl:py-24">
       <div className="overflow-hidden">
         <div className="container flex items-center gap-16">
           <HeroText />

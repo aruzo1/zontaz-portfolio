@@ -12,7 +12,7 @@ export const HeroText = () => {
         websites
       </h1>
 
-      <p className="max-w-5xl sm:text-lg text-neutral-300">
+      <p className="max-w-5xl sm:text-xl text-neutral-300">
         We make awesome websites that make your business stand out online. Our
         team uses creativity and tech skills to bring your ideas to life on the
         internet.
