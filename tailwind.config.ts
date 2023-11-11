@@ -52,6 +52,14 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-.5rem)" },
         },
+        marqueeLeft: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(calc(-100% + 100vw))" },
+        },
+        marqueeRight: {
+          "0%, 100%": { transform: "translateX(calc(-100% + 100vw))" },
+          "50%": { transform: "translateX(0)" },
+        },
         accordionSlideDown: {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -64,6 +72,8 @@ const config: Config = {
       animation: {
         levitateDown: "levitateDown 3s infinite ease-in-out",
         levitateUp: "levitateUp 3s infinite ease-in-out",
+        marqueeLeft: "marqueeLeft 120s infinite linear",
+        marqueeRight: "marqueeRight 120s infinite linear",
         accordionSlideDown: "accordionSlideDown 150ms ease-out",
         accordionSlideUp: "accordionSlideUp 150ms ease-in",
       },

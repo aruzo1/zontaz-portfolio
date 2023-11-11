@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HeroSection } from "@/components";
+import { HeroSection, ServicesMarquee } from "@/components";
 
 const HomePage = () => {
   return (
@@ -9,6 +9,7 @@ const HomePage = () => {
       </Head>
 
       <HeroSection />
+      <ServicesMarquee />
     </>
   );
 };
