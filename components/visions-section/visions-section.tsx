@@ -8,7 +8,7 @@ import { PROJECTS } from "@/lib/constants";
 
 export const VisionsSection = () => {
   return (
-    <section className="mt-24 pb-64">
+    <section className="mt-24">
       <div className="container flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
         <h2 className="max-w-2xl text-4xl sm:text-5xl md:text-7xl font-bold">
           View our clients latest visions
@@ -37,12 +37,8 @@ export const VisionsSection = () => {
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
-            768: {
-              slidesPerView: 1.5,
-            },
-            1280: {
-              slidesPerView: 2.5,
-            },
+            768: { slidesPerView: 1.5 },
+            1280: { slidesPerView: 2.5 },
           }}
           modules={[Autoplay]}
         >

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {
+  Faq,
   HeroSection,
   ProcessSection,
   ServicesMarquee,
@@ -17,6 +18,7 @@ const HomePage = () => {
       <ServicesMarquee />
       <ProcessSection />
       <VisionsSection />
+      <Faq />
     </>
   );
 };
