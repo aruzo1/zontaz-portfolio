@@ -22,10 +22,10 @@ export const NavbarDialog = () => {
         <Transition show={isOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-150"
+            enter="ease-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-150"
+            leave="ease-in duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -34,15 +34,17 @@ export const NavbarDialog = () => {
 
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-150"
+            enter="ease-out duration-300"
             enterFrom="-top-full"
             enterTo="top-0"
-            leave="ease-in duration-150"
+            leave="ease-in duration-300"
             leaveFrom="top-0"
             leaveTo="-top-full"
           >
             <Dialog.Content
-              className={`fixed z-10 top-0 inset-x-0 flex flex-col mt-16 border-b border-gray-800 bg-gray-950 text-white`}
+              className={`lg:hidden fixed z-10 top-0 inset-x-0 flex flex-col 
+                          mt-16 border-b border-gray-800 bg-gray-950 
+                          text-white`}
               forceMount
             >
               {NAVIGATION.map(({ href, label }) => (
@@ -55,14 +57,19 @@ export const NavbarDialog = () => {
                   </Link>
                 </Dialog.Close>
               ))}
-              <Dialog.Close className="flex flex-wrap gap-4 py-4 px-8">
-                <Socials />
 
-                <Link href="/quote" className="btn">
-                  Get a quote
-                  <span className="font-normal ml-1">- it&apos;s free</span>
-                </Link>
-              </Dialog.Close>
+              <div className="flex flex-wrap gap-4 py-4 px-8">
+                <Dialog.Close asChild>
+                  <Socials />
+                </Dialog.Close>
+
+                <Dialog.Close asChild>
+                  <Link href="/quote" className="btn">
+                    Get a quote
+                    <span className="font-normal ml-1">- it&apos;s free</span>
+                  </Link>
+                </Dialog.Close>
+              </div>
             </Dialog.Content>
           </Transition.Child>
         </Transition>
