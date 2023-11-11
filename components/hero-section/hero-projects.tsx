@@ -11,7 +11,6 @@ export const HeroProjects = () => {
             alt="project 1"
             width={800}
             height={500}
-            quality={100}
             priority
           />
         </div>

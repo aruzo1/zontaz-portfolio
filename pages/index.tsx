@@ -1,5 +1,5 @@
-import { FaqSection, HeroSection, ProcessSection } from "@/components";
 import Head from "next/head";
+import { HeroSection } from "@/components";
 
 const HomePage = () => {
   return (
