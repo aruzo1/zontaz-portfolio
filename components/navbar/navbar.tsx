@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Socials } from "@/components";
-import { Bars3Icon } from "@heroicons/react/20/solid";
+import { NavbarDialog } from "./navbar-dialog";
 
-const NAVIGATION = [
+export const NAVIGATION = [
   { href: "/", label: "Home" },
   { href: "/showcase", label: "Showcase" },
   { href: "/contact", label: "Contact" },
@@ -11,8 +11,8 @@ const NAVIGATION = [
 
 export const Navbar = () => {
   return (
-    <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 bg-gray-950/90 border-b border-b-gray-800 backdrop-blur-lg">
-      <nav className="container flex items-center justify-between lg:justify-start h-full">
+    <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 pointer-events-auto bg-gray-950 lg:bg-gray-950/90 border-b border-b-gray-800 backdrop-blur-lg">
+      <nav className="container flex items-center h-full">
         <Link href="/">
           <Image
             alt="logo"
@@ -42,9 +42,7 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        <button className="lg:hidden">
-          <Bars3Icon className="w-8 h-8 text-white" />
-        </button>
+        <NavbarDialog />
       </nav>
     </div>
   );

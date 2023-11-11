@@ -6,3 +6,5 @@ export * from "./services-marquee";
 export * from "./process-section";
 export * from "./visions-section";
 export * from "./faq";
+export * from "./footer";
+export * from "./project-image";

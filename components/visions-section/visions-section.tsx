@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { PROJECTS } from "@/lib/constants";
+import { ProjectImage } from "@/components";
 
 export const VisionsSection = () => {
   return (
@@ -42,21 +42,17 @@ export const VisionsSection = () => {
           }}
           modules={[Autoplay]}
         >
-          {PROJECTS.map(({ id, src, alt, slug }) => (
+          {PROJECTS.map(({ id, title, src, alt, slug }) => (
             <SwiperSlide key={id}>
-              <Link
-                href={`/showcase/${slug}`}
-                className="block shine-sm rounded overflow-hidden"
-              >
-                <Image
-                  className="-z-10 relative object-cover"
-                  src={src}
-                  alt={alt}
-                  width={800}
-                  height={500}
-                  quality={100}
-                />
-              </Link>
+              <ProjectImage
+                title={title}
+                slug={slug}
+                src={src}
+                alt={alt}
+                width={800}
+                height={500}
+                quality={100}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

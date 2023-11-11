@@ -16,9 +16,9 @@ export const SOCIALS = [
   },
 ];
 
-export const Socials = () => {
+export const Socials = ({ className }: { className?: string }) => {
   return (
-    <ul className="flex gap-4 text-white">
+    <ul className={`flex gap-4 text-white ${className}`}>
       {SOCIALS.map(({ href, icon }, i) => (
         <li key={i}>
           <Link href={href} className="btn btn-gray p-3 rounded-full">
