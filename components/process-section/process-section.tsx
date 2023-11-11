@@ -50,7 +50,7 @@ const ProcessStep = ({ title, description, icon }: ProcessStepProps) => {
 
 export const ProcessSection = () => {
   return (
-    <section className="container mt-24 pb-24">
+    <section className="container mt-24">
       <div className="flex flex-col items-center text-center">
         <span className="sm:text-xl font-bold text-primary-600">
           The process

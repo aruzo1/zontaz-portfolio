@@ -1,5 +1,10 @@
 import Head from "next/head";
-import { HeroSection, ProcessSection, ServicesMarquee } from "@/components";
+import {
+  HeroSection,
+  ProcessSection,
+  ServicesMarquee,
+  VisionsSection,
+} from "@/components";
 
 const HomePage = () => {
   return (
@@ -11,6 +16,7 @@ const HomePage = () => {
       <HeroSection />
       <ServicesMarquee />
       <ProcessSection />
+      <VisionsSection />
     </>
   );
 };

@@ -14,7 +14,7 @@ export const HeroSection = () => {
       <div className="-z-20 absolute inset-0 bg-topography-pattern opacity-5" />
       <div
         className={`-z-10 absolute inset-0 bg-gradient-to-t from-gray-950 
-                    to-transparent to-40%`}
+                    to-transparent to-70%`}
       />
     </main>
   );
