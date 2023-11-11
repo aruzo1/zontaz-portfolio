@@ -21,7 +21,11 @@ export const Socials = ({ className }: { className?: string }) => {
     <ul className={`flex gap-4 text-white ${className}`}>
       {SOCIALS.map(({ href, icon }, i) => (
         <li key={i}>
-          <Link href={href} className="btn btn-gray p-3 rounded-full">
+          <Link
+            href={href}
+            className="btn btn-gray p-3 rounded-full"
+            target="_blank"
+          >
             {icon}
           </Link>
         </li>

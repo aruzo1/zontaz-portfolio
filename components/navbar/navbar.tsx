@@ -36,7 +36,7 @@ export const Navbar = () => {
         <div className="hidden lg:flex gap-4 ml-auto">
           <Socials />
 
-          <Link href="/quote" className="btn">
+          <Link href="/contact" className="btn">
             Get a quote
             <span className="font-normal ml-1">- it&apos;s free</span>
           </Link>

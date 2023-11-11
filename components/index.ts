@@ -8,3 +8,4 @@ export * from "./visions-section";
 export * from "./faq";
 export * from "./footer";
 export * from "./project-image";
+export * from "./contact-form";

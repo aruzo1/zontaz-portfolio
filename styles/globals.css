@@ -40,11 +40,27 @@
     @apply cursor-pointer font-bold text-white hover:text-neutral-200 transition-colors;
   }
 
+  .link-blue {
+    @apply cursor-pointer underline text-blue-500 hover:text-blue-600 transition-colors;
+  }
+
   .btn {
     @apply shine-md cursor-pointer flex justify-center items-center px-6 py-3 rounded font-bold text-white bg-primary-600 hover:bg-primary-700 transition-colors;
   }
 
   .btn-gray {
     @apply btn shine-sm bg-gray-800 hover:bg-gray-900;
+  }
+
+  .field {
+    @apply flex flex-col gap-y-2;
+  }
+
+  .label {
+    @apply text-lg font-bold;
+  }
+
+  .input {
+    @apply px-6 py-4 rounded border border-gray-700 outline-none bg-gray-900 placeholder:text-gray-700;
   }
 }
