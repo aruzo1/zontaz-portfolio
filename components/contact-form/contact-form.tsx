@@ -38,7 +38,7 @@ export const ContactForm = () => {
 
   return (
     <ReCaptcha.Provider>
-      <ReCaptcha.Component onVerify={(t) => setToken(t)} />
+      <ReCaptcha.Component onVerify={(tk) => setToken(tk)} />
 
       <Toast
         type={error ? "fail" : "success"}
