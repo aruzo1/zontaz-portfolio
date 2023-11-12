@@ -19,7 +19,7 @@ export const HeroText = () => {
       </p>
 
       <nav className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-        <Link href="/showcase" className="btn w-full sm:w-auto">
+        <Link href="/showcase" className="btn-primary w-full sm:w-auto">
           Explore work
         </Link>
 

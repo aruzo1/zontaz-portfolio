@@ -14,7 +14,7 @@ export const VisionsSection = () => {
           View our clients latest visions
         </h2>
 
-        <Link href="/showcase" className="btn group">
+        <Link href="/showcase" className="btn-primary group">
           <span>View showcase</span>
           <ArrowLongRightIcon
             className={`w-6 h-6 ml-2 group-hover:translate-x-1 

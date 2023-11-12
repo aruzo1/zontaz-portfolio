@@ -64,7 +64,7 @@ export const NavbarDialog = () => {
                 </Dialog.Close>
 
                 <Dialog.Close asChild>
-                  <Link href="/contact" className="btn">
+                  <Link href="/contact" className="btn-primary">
                     Get a quote
                     <span className="font-normal ml-1">- it&apos;s free</span>
                   </Link>

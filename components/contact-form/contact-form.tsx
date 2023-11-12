@@ -1,29 +1,8 @@
-import { FormEvent, useCallback, useEffect, useState } from "react";
+import { FormEvent, useCallback, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import {
-  GoogleReCaptchaProvider,
-  useGoogleReCaptcha,
-} from "react-google-recaptcha-v3";
+import { Button, ReCaptcha, Toast } from "@/components";
 import { useInput } from "@/hooks";
-
-const ReCaptcha = ({ onVerify }: { onVerify: (token: string) => void }) => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-
-  useEffect(() => {
-    const verify = () => {
-      if (!executeRecaptcha) return;
-
-      executeRecaptcha().then((value) => onVerify(value));
-    };
-
-    const verifyInterval = setInterval(verify, 3000);
-
-    return () => clearInterval(verifyInterval);
-  }, [executeRecaptcha, onVerify]);
-
-  return null;
-};
 
 export const ContactForm = () => {
   const { value: name, handler: nameHandler } = useInput("");
@@ -31,12 +10,24 @@ export const ContactForm = () => {
   const { value: message, handler: messageHandler } = useInput("");
 
   const [token, setToken] = useState<null | string>(null);
+  const [openToast, setOpenToast] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const submitHandler = useCallback(
     (e: FormEvent) => {
       e.preventDefault();
 
-      axios.post("/api/contact", { name, email, message, token });
+      setLoading(true);
+      setError(false);
+
+      axios
+        .post("/api/contact", { name, email, message, token })
+        .catch(() => setError(true))
+        .finally(() => {
+          setLoading(false);
+          setOpenToast(true);
+        });
 
       nameHandler("");
       emailHandler("");
@@ -46,17 +37,22 @@ export const ContactForm = () => {
   );
 
   return (
-    <section>
-      <GoogleReCaptchaProvider
-        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-        container={{ parameters: { theme: "dark" } }}
+    <ReCaptcha.Provider>
+      <ReCaptcha.Component onVerify={(t) => setToken(t)} />
+
+      <Toast
+        type={error ? "fail" : "success"}
+        open={openToast}
+        onOpenChange={() => setOpenToast(!openToast)}
       >
+        {error ? "Failed to send message" : "Successfully sent message"}
+      </Toast>
+
+      <section>
         <form
           className="relative container flex flex-col items-center pt-48 pb-32"
           onSubmit={submitHandler}
         >
-          <ReCaptcha onVerify={(t) => setToken(t)} />
-
           <span className="sm:text-xl font-bold text-primary-600">
             Contact / Quote
           </span>
@@ -64,7 +60,7 @@ export const ContactForm = () => {
             So, what do you need?
           </h2>
 
-          <div className="grid md:grid-cols-2 w-full max-w-5xl gap-8 mt-12">
+          <div className="grid md:grid-cols-2 w-full max-w-4xl gap-8 mt-12">
             <fieldset className="field">
               <label htmlFor="name" className="label">
                 Name<span className="text-red-500">*</span>
@@ -122,15 +118,17 @@ export const ContactForm = () => {
             </Link>
           </span>
 
-          <button className="btn mt-8">Send message</button>
+          <Button type="submit" className="mt-8" loading={loading}>
+            Send message
+          </Button>
         </form>
-      </GoogleReCaptchaProvider>
 
-      <div className="-z-20 absolute inset-0 bg-topography-pattern opacity-5" />
-      <div
-        className={`-z-10 absolute inset-0 bg-gradient-to-t from-gray-950 
-                    to-transparent to-70%`}
-      />
-    </section>
+        <div className="-z-20 absolute inset-0 bg-topography-pattern opacity-5" />
+        <div
+          className={`-z-10 absolute inset-0 bg-gradient-to-t from-gray-950 
+                      to-transparent to-70%`}
+        />
+      </section>
+    </ReCaptcha.Provider>
   );
 };

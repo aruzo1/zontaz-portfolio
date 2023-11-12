@@ -9,3 +9,6 @@ export * from "./faq";
 export * from "./footer";
 export * from "./project-image";
 export * from "./contact-form";
+export * from "./toast";
+export * from "./re-captcha";
+export * from "./button";

@@ -23,12 +23,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  console.log({
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message,
-  });
-
   res.status(201).end();
 };
 
