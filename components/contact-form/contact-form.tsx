@@ -72,6 +72,7 @@ export const ContactForm = () => {
                 className="input"
                 placeholder="Enter your name"
                 autoComplete="name"
+                maxLength={255}
                 required
                 value={name}
                 onChange={(e) => nameHandler(e.target.value)}
@@ -89,6 +90,7 @@ export const ContactForm = () => {
                 className="input"
                 placeholder="Enter your email address"
                 autoComplete="email"
+                maxLength={255}
                 required
                 value={email}
                 onChange={(e) => emailHandler(e.target.value)}
@@ -104,6 +106,7 @@ export const ContactForm = () => {
                 name="text"
                 className="input min-h-[200px]"
                 placeholder="Tell us what do you need"
+                maxLength={2500}
                 required
                 value={text}
                 onChange={(e) => textHandler(e.target.value)}
