@@ -24,7 +24,7 @@ export const VisionsSection = () => {
       </div>
 
       <div className="relative mt-16 px-8 md:p-0">
-        <div className="-z-10 absolute inset-0 bg-white blur-[100px] opacity-5" />
+        <div className="-z-10 absolute inset-0 bg-white blur-[100px] opacity-[7%]" />
 
         <Swiper
           slidesPerView={1}

@@ -38,7 +38,7 @@ export const Navbar = () => {
 
           <Link href="/contact" className="btn-primary">
             Get a quote
-            <span className="font-normal ml-1">- it&apos;s free</span>
+            <span className="font-normal">- it&apos;s free</span>
           </Link>
         </div>
 

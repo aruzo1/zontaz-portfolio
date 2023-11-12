@@ -48,17 +48,17 @@ export const ContactForm = () => {
         {error ? "Failed to send message" : "Successfully sent message"}
       </Toast>
 
-      <section>
+      <section className="relative">
         <form
-          className="relative container flex flex-col items-center pt-48 pb-32"
+          className="relative container flex flex-col items-center pt-40 pb-24"
           onSubmit={submitHandler}
         >
           <span className="sm:text-xl font-bold text-primary-600">
             Contact / Quote
           </span>
-          <h2 className="mt-4 text-center text-4xl sm:text-5xl md:text-7xl font-bold">
+          <h1 className="mt-4 text-center text-4xl sm:text-5xl md:text-7xl font-bold">
             So, what do you need?
-          </h2>
+          </h1>
 
           <div className="grid md:grid-cols-2 w-full max-w-4xl gap-8 mt-12">
             <fieldset className="field">

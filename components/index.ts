@@ -12,3 +12,4 @@ export * from "./contact-form";
 export * from "./toast";
 export * from "./re-captcha";
 export * from "./button";
+export * from "./showcase";
