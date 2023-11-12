@@ -41,7 +41,7 @@
   }
 
   .link-blue {
-    @apply cursor-pointer underline text-blue-500 hover:text-blue-600 transition-colors;
+    @apply cursor-pointer underline text-primary-500 hover:text-primary-600 transition-colors;
   }
 
   .btn {
