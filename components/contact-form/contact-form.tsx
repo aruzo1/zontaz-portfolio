@@ -7,7 +7,7 @@ import { useInput } from "@/hooks";
 export const ContactForm = () => {
   const { value: name, handler: nameHandler } = useInput("");
   const { value: email, handler: emailHandler } = useInput("");
-  const { value: message, handler: messageHandler } = useInput("");
+  const { value: text, handler: textHandler } = useInput("");
 
   const [token, setToken] = useState<null | string>(null);
   const [openToast, setOpenToast] = useState(false);
@@ -22,7 +22,7 @@ export const ContactForm = () => {
       setError(false);
 
       axios
-        .post("/api/contact", { name, email, message, token })
+        .post("/api/contact", { name, email, text, token })
         .catch(() => setError(true))
         .finally(() => {
           setLoading(false);
@@ -31,9 +31,9 @@ export const ContactForm = () => {
 
       nameHandler("");
       emailHandler("");
-      messageHandler("");
+      textHandler("");
     },
-    [nameHandler, emailHandler, messageHandler, name, email, message, token]
+    [nameHandler, emailHandler, textHandler, name, email, text, token]
   );
 
   return (
@@ -96,17 +96,17 @@ export const ContactForm = () => {
             </fieldset>
 
             <fieldset className="field col-span-full">
-              <label htmlFor="message" className="label">
-                Message<span className="text-red-500">*</span>
+              <label htmlFor="text" className="label">
+                Text<span className="text-red-500">*</span>
               </label>
               <textarea
-                id="message"
-                name="message"
+                id="text"
+                name="text"
                 className="input min-h-[200px]"
                 placeholder="Tell us what do you need"
                 required
-                value={message}
-                onChange={(e) => messageHandler(e.target.value)}
+                value={text}
+                onChange={(e) => textHandler(e.target.value)}
               />
             </fieldset>
           </div>

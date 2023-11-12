@@ -10,9 +10,9 @@ export const ShowcaseProject = (props: Project) => {
     <li>
       <Link
         href={`/showcase/${slug}`}
-        className="group z-0 relative block h-full p-6 rounded bg-gray-950 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.065),transparent)] border border-gray-800"
+        className="group z-0 relative block h-full p-6 rounded hover:shine-sm bg-gray-950 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.065),transparent)] border border-gray-800 transition-shadow"
       >
-        <div className="shine-sm group-hover:shine-md rounded overflow-hidden transition-all">
+        <div className="shine-sm rounded overflow-hidden transition-all">
           <Image
             className="-z-10 relative w-full"
             src={src}
@@ -22,9 +22,9 @@ export const ShowcaseProject = (props: Project) => {
           />
         </div>
 
-        <div className="flex items-center mt-4 group-hover:text-gray-200 transition-colors">
+        <div className="flex items-center mt-4 group-hover:text-gray-300 transition-colors">
           <h2 className="text-2xl font-bold">{title}</h2>
-          <ArrowUpRightIcon className="w-7 h-7 ml-1 group-hover:translate-x-px group-hover:-translate-y-px transition-transform" />
+          <ArrowUpRightIcon className="w-7 h-7 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </div>
 
         <p className="mt-2 text-gray-300">{description}</p>
