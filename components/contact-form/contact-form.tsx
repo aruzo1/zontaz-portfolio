@@ -17,8 +17,6 @@ const ReCaptcha = ({ onVerify }: { onVerify: (token: string) => void }) => {
       executeRecaptcha().then((value) => onVerify(value));
     };
 
-    verify();
-
     const verifyInterval = setInterval(verify, 3000);
 
     return () => clearInterval(verifyInterval);
@@ -33,7 +31,6 @@ export const ContactForm = () => {
   const { value: message, handler: messageHandler } = useInput("");
 
   const [token, setToken] = useState<null | string>(null);
-  console.log(token);
 
   const submitHandler = useCallback(
     (e: FormEvent) => {
