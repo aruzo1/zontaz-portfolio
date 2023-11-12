@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     !req.body.token ||
     req.body.name.length > 255 ||
     req.body.email.length > 255 ||
-    req.body.text.length > 1000
+    req.body.text.length > 2500
   ) {
     res.status(400).end();
     return;
