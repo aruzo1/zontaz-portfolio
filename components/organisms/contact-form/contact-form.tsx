@@ -114,7 +114,7 @@ export const ContactForm = () => {
             </fieldset>
           </div>
 
-          <span className="text-lg mt-8">
+          <span className="mt-8 text-lg text-center">
             Or email us at{" "}
             <Link href="mailto:contact@zontaz.com" className="link-blue">
               contact@zontaz.com
