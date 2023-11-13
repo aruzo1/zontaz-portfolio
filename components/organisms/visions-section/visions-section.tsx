@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { PROJECTS } from "@/lib/constants";
-import { ProjectImage } from "@/components";
+import { ProjectImage } from "@/components/molecules";
 
 export const VisionsSection = () => {
   return (
@@ -50,8 +50,7 @@ export const VisionsSection = () => {
                 src={src}
                 alt={alt}
                 width={800}
-                height={500}
-                quality={100}
+                height={450}
               />
             </SwiperSlide>
           ))}

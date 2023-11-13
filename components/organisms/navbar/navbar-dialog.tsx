@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import { Socials } from "@/components";
+import { Socials } from "@/components/molecules";
 import { NAVIGATION } from ".";
 
 export const NavbarDialog = () => {

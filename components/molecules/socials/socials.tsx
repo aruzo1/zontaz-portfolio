@@ -1,32 +1,35 @@
 import Link from "next/link";
-import { FiverrIcon, GithubIcon, InstagramIcon } from "@/components";
+import { FiverrIcon, GithubIcon, InstagramIcon } from "@/components/atoms";
 
 export const SOCIALS = [
   {
+    label: "Instagram",
     href: "https://www.instagram.com/zontaz1/",
-    icon: <InstagramIcon aria-label="Instagram" className="w-6 h-6" />,
+    Icon: InstagramIcon,
   },
   {
+    label: "Github",
     href: "https://github.com/zontaz-dev",
-    icon: <GithubIcon aria-label="Github" className="w-6 h-6" />,
+    Icon: GithubIcon,
   },
   {
+    label: "Fiverr",
     href: "https://www.fiverr.com/aruzoyt",
-    icon: <FiverrIcon aria-label="Fiverr" className="w-6 h-6" />,
+    Icon: FiverrIcon,
   },
 ];
 
 export const Socials = ({ className }: { className?: string }) => {
   return (
     <ul className={`flex gap-4 text-white ${className}`}>
-      {SOCIALS.map(({ href, icon }, i) => (
+      {SOCIALS.map(({ label, href, Icon }, i) => (
         <li key={i}>
           <Link
             href={href}
-            className="btn btn-gray p-3 rounded-full"
+            className="btn-gray p-3 rounded-full"
             target="_blank"
           >
-            {icon}
+            <Icon aria-label={label} className="w-6 h-6" />
           </Link>
         </li>
       ))}

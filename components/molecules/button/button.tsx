@@ -1,6 +1,6 @@
 import { ComponentProps, forwardRef } from "react";
 import { useClassNameMerged } from "@/hooks";
-import { SpinnerIcon } from "@/components";
+import { SpinnerIcon } from "@/components/atoms";
 
 type Props = {
   loading?: boolean;

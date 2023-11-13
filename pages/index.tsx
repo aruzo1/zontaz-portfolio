@@ -5,7 +5,7 @@ import {
   ProcessSection,
   ServicesMarquee,
   VisionsSection,
-} from "@/components";
+} from "@/components/organisms";
 
 const HomePage = () => {
   return (

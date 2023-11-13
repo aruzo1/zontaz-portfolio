@@ -1,4 +1,4 @@
-import { Showcase } from "@/components";
+import { Showcase } from "@/components/organisms";
 import Head from "next/head";
 
 const ShowcasePage = () => {

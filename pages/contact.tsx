@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ContactForm } from "@/components";
+import { ContactForm } from "@/components/organisms";
 
 const ContactPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { ProjectImage } from "@/components";
+import { ProjectImage } from "@/components/molecules";
 import { PROJECTS } from "@/lib/constants";
 
 export const HeroProjects = () => {
@@ -11,7 +11,7 @@ export const HeroProjects = () => {
           src={PROJECTS[0].src}
           alt={PROJECTS[0].alt}
           width={800}
-          height={500}
+          height={450}
           priority
         />
 
@@ -22,7 +22,7 @@ export const HeroProjects = () => {
             src={PROJECTS[1].src}
             alt={PROJECTS[1].alt}
             width={300}
-            height={190}
+            height={170}
           />
         </div>
 
@@ -33,7 +33,7 @@ export const HeroProjects = () => {
             src={PROJECTS[2].src}
             alt={PROJECTS[2].alt}
             width={300}
-            height={190}
+            height={170}
           />
         </div>
       </div>

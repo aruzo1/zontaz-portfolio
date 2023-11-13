@@ -1,7 +1,7 @@
 import { FormEvent, useCallback, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import { Button, ReCaptcha, Toast } from "@/components";
+import { Button, ReCaptcha, Toast } from "@/components/molecules";
 import { useInput } from "@/hooks";
 
 export const ContactForm = () => {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Socials } from "@/components";
+import { Socials } from "@/components/molecules";
 import { NavbarDialog } from "./navbar-dialog";
 
 export const NAVIGATION = [

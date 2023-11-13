@@ -83,7 +83,7 @@ export const Toast = (props: Props) => {
         </ToastPrimitive.Root>
       </Transition>
 
-      <ToastPrimitive.Viewport className="z-30 fixed top-24 right-8" />
+      <ToastPrimitive.Viewport className="z-30 fixed top-24 right-8 pl-8 max-w-full" />
     </ToastPrimitive.Provider>
   );
 };
