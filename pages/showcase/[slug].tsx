@@ -1,6 +1,7 @@
 import {
-  GetServerSideProps,
-  InferGetServerSidePropsType,
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
   NextPage,
 } from "next";
 import Head from "next/head";
@@ -34,16 +35,21 @@ const ProjectPage = (({ project }) => {
       </main>
     </>
   );
-}) satisfies NextPage<InferGetServerSidePropsType<typeof getServerSideProps>>;
+}) satisfies NextPage<InferGetStaticPropsType<typeof getStaticProps>>;
 
-export const getServerSideProps = (async (ctx) => {
+export const getStaticPaths = (() => {
+  return {
+    paths: PROJECTS.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
+  };
+}) satisfies GetStaticPaths;
+
+export const getStaticProps = ((ctx) => {
   const slug = ctx.params!.slug as string;
 
-  const project = PROJECTS.find((p) => p.slug === slug);
-
-  if (!project) return { notFound: true };
+  const project = PROJECTS.find((p) => p.slug === slug)!;
 
   return { props: { project } };
-}) satisfies GetServerSideProps<{ project: Project }>;
+}) satisfies GetStaticProps<{ project: Project }>;
 
 export default ProjectPage;
