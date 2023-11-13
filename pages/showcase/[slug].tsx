@@ -14,6 +14,7 @@ const ProjectPage = (({ project }) => {
     <>
       <Head>
         <title>{`${project.title} - Zontaz`}</title>
+        <meta name="description" content="Zontaz project page in build." />
       </Head>
 
       <main className="relative flex flex-col items-center justify-center h-[800px] text-center">

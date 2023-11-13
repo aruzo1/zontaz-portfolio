@@ -12,7 +12,10 @@ export const NavbarDialog = () => {
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
-        <button className="lg:hidden ml-auto text-white">
+        <button
+          className="lg:hidden ml-auto text-white"
+          aria-label="Navbar toggle button"
+        >
           {isOpen && <XMarkIcon className="w-8 h-8" />}
           {!isOpen && <Bars3Icon className="w-8 h-8" />}
         </button>
