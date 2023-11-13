@@ -54,6 +54,18 @@ export const VisionsSection = () => {
               />
             </SwiperSlide>
           ))}
+          {PROJECTS.map(({ id, title, src, alt, slug }) => (
+            <SwiperSlide key={id}>
+              <ProjectImage
+                title={title}
+                slug={slug}
+                src={src}
+                alt={alt}
+                width={800}
+                height={450}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>
