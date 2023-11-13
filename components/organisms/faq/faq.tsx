@@ -1,37 +1,63 @@
+import { ReactNode } from "react";
+import Link from "next/link";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { SOCIALS } from "@/lib/constants";
 
 export const FAQ_QUESTIONS = [
   {
     question: "How long does it take to build a website?",
     answer:
-      "We understand the importance of timely delivery. The timeline for website development varies depending on the complexity of the project. We'll provide you with a clear timeline after discussing your specific requirements.",
+      "The time to build a website varies based on its complexity. A standard 5-tab business site takes around 10 days, while a more extensive 20-tab site may take approximately 20 days. Keep in mind these are general estimates, and the actual timeline depends on specific project requirements.",
   },
   {
-    question: "Can I update the content on website?",
-    answer:
-      "Absolutely! We use user-friendly content management systems that empower you to easily update and manage your website content without the need for technical expertise.",
+    question: "What materials should I prepare when getting a website made?",
+    answer: (
+      <>
+        - Brand Assets: Share your logo, colors, and any brand guidelines.
+        <br />- Content: Identify the sections you want on your site, prepare
+        text content.
+        <br />- Contact: Give us your business contact details.
+        <br />- Reference websites: Share sites you like for inspiration.
+      </>
+    ),
   },
   {
-    question: "Do you offer website maintenance services?",
+    question: "How much time do I need to spend helping on the website?",
     answer:
-      "Yes, we provide ongoing maintenance services to ensure your website remains up-to-date, secure, and performing at its best. Our team is here to support you even after your website is launched.",
-  },
-  {
-    question: "What makes a good website?",
-    answer:
-      "A good website is one that not only looks visually appealing but also offers a seamless user experience. It should be easy to navigate, mobile-friendly, and effectively communicate your brand's message to your target audience.",
+      "Don't worry if you're busy! Your level of involvement is totally up to you. We have different ways to work together because we know running a business can keep you pretty busy.",
   },
   {
     question: "How do I get with building my website?",
+    answer: (
+      <>
+        Getting started is easy! Simply reach out to us through our{" "}
+        <Link href="/contact" className="link-blue">
+          Contact Page
+        </Link>{" "}
+        or find us on{" "}
+        <Link
+          href={SOCIALS.find((s) => s.label === "Fiverr")!.href}
+          className="link-blue"
+          target="_blank"
+        >
+          Fiverr
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    question:
+      "Can I expand the website with extra tabs and features in the future?",
     answer:
-      "Getting started is easy! Simply reach out to us through our contact page or give us a call. We'll schedule a consultation to discuss your ideas, goals, and specific requirements to kick off the website creation process.",
+      "Yes, definitely! Our websites are built to grow with your needs. You can easily include more sections or features whenever you want.",
   },
 ];
 
 type FaqQuestionProps = {
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 const FaqQuestion = ({ question, answer }: FaqQuestionProps) => {
