@@ -3,10 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
   transpilePackages: [
-    "@radix-ui/react-dialog",
-    "@radix-ui/react-accordion",
-    "@radix-ui/react-toast",
-  ],
+    "@radix-ui",
+    "swiper"
+],
 };
 
 module.exports = nextConfig;
