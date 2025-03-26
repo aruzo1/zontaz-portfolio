@@ -1,11 +1,13 @@
-import { ComponentProps, forwardRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 
-type Props = { title: string; slug: string } & ComponentProps<typeof Image>;
+type Props = { title: string; slug: string } & React.ComponentPropsWithoutRef<
+  typeof Image
+>;
 
-export const ProjectImage = forwardRef<HTMLImageElement, Props>(
+export const ProjectImage = React.forwardRef<HTMLImageElement, Props>(
   ({ title, slug, ...rest }, ref) => {
     return (
       <Link

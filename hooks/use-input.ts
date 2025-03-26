@@ -1,9 +1,9 @@
-import { useCallback, useState } from "react";
+import React from "react";
 
 export function useInput<T>(defaultValue?: T) {
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = React.useState(defaultValue);
 
-  const handler = useCallback((v: T) => setValue(v), []);
+  const handler = React.useCallback((v: T) => setValue(v), []);
 
   return { value, handler };
 }

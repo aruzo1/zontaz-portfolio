@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import Link from "next/link";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -57,7 +56,7 @@ export const FAQ_QUESTIONS = [
 
 type FaqQuestionProps = {
   question: string;
-  answer: ReactNode;
+  answer: React.ReactNode;
 };
 
 const FaqQuestion = ({ question, answer }: FaqQuestionProps) => {

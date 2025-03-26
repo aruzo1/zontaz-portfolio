@@ -1,4 +1,4 @@
-import { Fragment, ReactNode, useMemo } from "react";
+import React from "react";
 import * as ToastPrimitive from "@radix-ui/react-toast";
 import {
   CheckCircleIcon,
@@ -28,7 +28,7 @@ const types = {
 };
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
   type?: keyof typeof types;
   open: boolean;
   onOpenChange: () => void;
@@ -37,8 +37,8 @@ type Props = {
 export const Toast = (props: Props) => {
   const { children, open, onOpenChange, type = "success" } = props;
 
-  const toastType = useMemo(() => types[type], [type]);
-  const Icon = useMemo(() => toastType.icon, [toastType]);
+  const toastType = React.useMemo(() => types[type], [type]);
+  const Icon = React.useMemo(() => toastType.icon, [toastType]);
 
   const rootClassName = useClassNameMerged(
     "flex items-center gap-4 p-4 rounded shine-sm shadow-md",
@@ -55,7 +55,7 @@ export const Toast = (props: Props) => {
   return (
     <ToastPrimitive.Provider>
       <Transition
-        as={Fragment}
+        as={React.Fragment}
         show={open}
         enter="ease-out duration-150"
         enterFrom="opacity-0 translate-x-8"

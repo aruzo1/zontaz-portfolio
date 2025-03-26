@@ -1,6 +1,6 @@
-import { ComponentProps, forwardRef } from "react";
+import React from "react";
 
-export const InstagramIcon = forwardRef<SVGSVGElement, ComponentProps<"svg">>(
+export const InstagramIcon = React.forwardRef<SVGSVGElement, React.ComponentPropsWithoutRef<"svg">>(
   (props, ref) => {
     return (
       <svg

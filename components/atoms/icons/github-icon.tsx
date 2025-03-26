@@ -1,6 +1,6 @@
-import { ComponentProps, forwardRef } from "react";
+import React from "react";
 
-export const GithubIcon = forwardRef<SVGSVGElement, ComponentProps<"svg">>(
+export const GithubIcon = React.forwardRef<SVGSVGElement, React.ComponentPropsWithoutRef<"svg">>(
   (props, ref) => {
     return (
       <svg

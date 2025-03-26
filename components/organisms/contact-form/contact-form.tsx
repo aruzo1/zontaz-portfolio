@@ -1,4 +1,4 @@
-import { FormEvent, useCallback, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import axios from "axios";
 import { Button, ReCaptcha, Toast } from "@/components/molecules";
@@ -9,13 +9,13 @@ export const ContactForm = () => {
   const { value: email, handler: emailHandler } = useInput("");
   const { value: text, handler: textHandler } = useInput("");
 
-  const [token, setToken] = useState<null | string>(null);
-  const [openToast, setOpenToast] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [token, setToken] = React.useState<null | string>(null);
+  const [openToast, setOpenToast] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(false);
 
-  const submitHandler = useCallback(
-    (e: FormEvent) => {
+  const submitHandler = React.useCallback(
+    (e: React.FormEvent) => {
       e.preventDefault();
 
       setLoading(true);

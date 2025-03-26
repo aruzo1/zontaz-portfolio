@@ -1,12 +1,12 @@
-import { ComponentProps, forwardRef } from "react";
 import { useClassNameMerged } from "@/hooks";
 import { SpinnerIcon } from "@/components/atoms";
+import React from "react";
 
 type Props = {
   loading?: boolean;
-} & ComponentProps<"button">;
+} & React.ComponentPropsWithoutRef<"button">;
 
-export const Button = forwardRef<HTMLButtonElement, Props>(
+export const Button = React.forwardRef<HTMLButtonElement, Props>(
   ({ children, className, loading = false, ...rest }, ref) => {
     const classNameMerged = useClassNameMerged("btn-primary", className);
 

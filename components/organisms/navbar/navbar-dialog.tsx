@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Transition } from "@headlessui/react";
@@ -7,7 +7,7 @@ import { Socials } from "@/components/molecules";
 import { NAVIGATION } from ".";
 
 export const NavbarDialog = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -24,7 +24,7 @@ export const NavbarDialog = () => {
       <Dialog.Portal forceMount>
         <Transition show={isOpen}>
           <Transition.Child
-            as={Fragment}
+            as={React.Fragment}
             enter="ease-out duration-200"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -36,7 +36,7 @@ export const NavbarDialog = () => {
           </Transition.Child>
 
           <Transition.Child
-            as={Fragment}
+            as={React.Fragment}
             enter="ease-out duration-200"
             enterFrom="-top-full"
             enterTo="top-0"

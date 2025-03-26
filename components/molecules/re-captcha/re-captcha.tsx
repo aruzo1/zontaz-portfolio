@@ -1,4 +1,4 @@
-import { ComponentProps, useEffect } from "react";
+import React from "react";
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
@@ -11,7 +11,7 @@ type ReCaptchaComponentProps = {
 export const ReCaptchaComponent = ({ onVerify }: ReCaptchaComponentProps) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const verify = () => {
       if (!executeRecaptcha) return;
 
@@ -27,7 +27,7 @@ export const ReCaptchaComponent = ({ onVerify }: ReCaptchaComponentProps) => {
 };
 
 type ReCaptchaProviderProps = Omit<
-  ComponentProps<typeof GoogleReCaptchaProvider>,
+  React.ComponentPropsWithoutRef<typeof GoogleReCaptchaProvider>,
   "reCaptchaKey"
 >;
 
