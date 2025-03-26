@@ -117,7 +117,7 @@ export const ContactForm = () => {
           <span className="mt-8 text-lg text-center">
             Or email us at{" "}
             <Link href="mailto:contact@zontaz.com" className="link-blue">
-              contact@zontaz.com
+              contact@aruzo.com
             </Link>
           </span>
 

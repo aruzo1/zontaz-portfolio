@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Socials } from "@/components/molecules";
 import { NavbarDialog } from "./navbar-dialog";
+import { Logo } from "@/components/atoms";
 
 export const NAVIGATION = [
   { href: "/", label: "Home" },
@@ -14,13 +15,7 @@ export const Navbar = () => {
     <div className="z-20 fixed top-0 inset-x-0 box-content h-12 py-2 pointer-events-auto bg-gray-950 lg:bg-gray-950/90 border-b border-b-gray-800 backdrop-blur-lg">
       <nav className="container flex items-center h-full">
         <Link href="/">
-          <Image
-            alt="logo"
-            src="/logo.png"
-            height={22.5}
-            width={90}
-            quality={100}
-          />
+          <Logo height={30} width={72} />
         </Link>
 
         <ul className="hidden lg:flex gap-12 ml-16">
